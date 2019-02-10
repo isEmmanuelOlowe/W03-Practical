@@ -5,9 +5,37 @@ import java.text.DecimalFormat;
 //will handle dataset related problems
 public class DataProcessor {
 
-  ArrayList<Feature> dataset = new ArrayList<Feature>();
-  SortedMap<String, int[]> ratingList = new TreeMap<String, int[]>();
-  double minimumRating;
+  private ArrayList<Feature> dataset = new ArrayList<Feature>();
+  private SortedMap<String, int[]> ratingList = new TreeMap<String, int[]>();
+  private double minimumRating;
+
+  public void readCSV(String fileName){
+    //will temporarily store a line in the dataset
+    String line = null;
+    try {
+      //FileReader reads text files in the default enconding
+      FileReader fileReader = new FileReader(fileName);
+
+      BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+      //firts line is just feature headings
+      line = bufferedReader.readLine();
+      //reads the data from the flll;
+      while((line = bufferedReader.readLine()) != null){
+        //adds the line of file to the dataset
+        this.addFeature(line.split(","));
+      }
+      bufferedReader.close();
+    }
+    //in event file cannot be opened
+    catch(FileNotFoundException ex){
+      System.out.println("Unable to open dataset: " + fileName);
+    }
+    //incase error in reading the dataset
+    catch(IOException ex){
+      System.out.println("Error in reading dataset: " + fileName);
+    }
+  }
   //converts string array to Feature object and adds it to data list
   public void addFeature(String[] line){
     //converts first index to 0
@@ -37,7 +65,7 @@ public class DataProcessor {
     this.dataset.add(feature);
   }
 
-
+  //process the dataset to obtain restaurants which meet minimum rating
   public void process(String sMinimumRating){
     try{
       this.minimumRating = Double.parseDouble(sMinimumRating);
@@ -54,7 +82,7 @@ public class DataProcessor {
       }
     }
 
-  public int[] rating(int cityRating[], double resRating){
+  public int[] rating(int[] cityRating, double resRating){
     int[] updatedRating = cityRating;
     if(resRating >= this.minimumRating){
       updatedRating[0] += 1;

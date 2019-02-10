@@ -31,5 +31,7 @@ public class W03Practical {
     catch(IOException ex){
       System.out.println("Error in reading dataset: " + fileName);
     }
+
+    bufferedReader.close()
   }
 }

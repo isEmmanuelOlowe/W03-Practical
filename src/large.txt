@@ -1,0 +1,161 @@
+Dublin has 2082 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 608
+Number or restraunts with rating below 3.5: 1474
+Percentage of restraunts with rating above (or equal to) 3.5: 29%
+
+Hamburg has 3131 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 1095
+Number or restraunts with rating below 3.5: 2036
+Percentage of restraunts with rating above (or equal to) 3.5: 34%
+
+Geneva has 1572 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 563
+Number or restraunts with rating below 3.5: 1009
+Percentage of restraunts with rating above (or equal to) 3.5: 35%
+
+Zurich has 1667 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 498
+Number or restraunts with rating below 3.5: 1169
+Percentage of restraunts with rating above (or equal to) 3.5: 29%
+
+Copenhagen has 2109 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 717
+Number or restraunts with rating below 3.5: 1392
+Percentage of restraunts with rating above (or equal to) 3.5: 33%
+
+Rome has 5949 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 794
+Number or restraunts with rating below 3.5: 5155
+Percentage of restraunts with rating above (or equal to) 3.5: 13%
+
+Amsterdam has 3434 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 854
+Number or restraunts with rating below 3.5: 2580
+Percentage of restraunts with rating above (or equal to) 3.5: 24%
+
+Luxembourg has 657 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 251
+Number or restraunts with rating below 3.5: 406
+Percentage of restraunts with rating above (or equal to) 3.5: 38%
+
+Vienna has 3724 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 1100
+Number or restraunts with rating below 3.5: 2624
+Percentage of restraunts with rating above (or equal to) 3.5: 29%
+
+Edinburgh has 1865 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 551
+Number or restraunts with rating below 3.5: 1314
+Percentage of restraunts with rating above (or equal to) 3.5: 29%
+
+Helsinki has 1228 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 460
+Number or restraunts with rating below 3.5: 768
+Percentage of restraunts with rating above (or equal to) 3.5: 37%
+
+Munich has 2995 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 960
+Number or restraunts with rating below 3.5: 2035
+Percentage of restraunts with rating above (or equal to) 3.5: 32%
+
+Brussels has 3204 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 1189
+Number or restraunts with rating below 3.5: 2015
+Percentage of restraunts with rating above (or equal to) 3.5: 37%
+
+Oslo has 1213 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 461
+Number or restraunts with rating below 3.5: 752
+Percentage of restraunts with rating above (or equal to) 3.5: 38%
+
+Warsaw has 2352 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 717
+Number or restraunts with rating below 3.5: 1635
+Percentage of restraunts with rating above (or equal to) 3.5: 30%
+
+Barcelona has 8425 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 2986
+Number or restraunts with rating below 3.5: 5439
+Percentage of restraunts with rating above (or equal to) 3.5: 35%
+
+Berlin has 7078 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 2046
+Number or restraunts with rating below 3.5: 5032
+Percentage of restraunts with rating above (or equal to) 3.5: 28%
+
+Lisbon has 3986 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 1184
+Number or restraunts with rating below 3.5: 2802
+Percentage of restraunts with rating above (or equal to) 3.5: 29%
+
+Lyon has 2930 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 1131
+Number or restraunts with rating below 3.5: 1799
+Percentage of restraunts with rating above (or equal to) 3.5: 38%
+
+Athens has 1938 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 462
+Number or restraunts with rating below 3.5: 1476
+Percentage of restraunts with rating above (or equal to) 3.5: 23%
+
+Bratislava has 1067 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 440
+Number or restraunts with rating below 3.5: 627
+Percentage of restraunts with rating above (or equal to) 3.5: 41%
+
+Ljubljana has 501 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 126
+Number or restraunts with rating below 3.5: 375
+Percentage of restraunts with rating above (or equal to) 3.5: 25%
+
+Stockholm has 2705 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 1157
+Number or restraunts with rating below 3.5: 1548
+Percentage of restraunts with rating above (or equal to) 3.5: 42%
+
+Prague has 4859 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 1833
+Number or restraunts with rating below 3.5: 3026
+Percentage of restraunts with rating above (or equal to) 3.5: 37%
+
+Budapest has 2606 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 737
+Number or restraunts with rating below 3.5: 1869
+Percentage of restraunts with rating above (or equal to) 3.5: 28%
+
+Oporto has 1580 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 373
+Number or restraunts with rating below 3.5: 1207
+Percentage of restraunts with rating above (or equal to) 3.5: 23%
+
+Milan has 6687 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 2905
+Number or restraunts with rating below 3.5: 3782
+Percentage of restraunts with rating above (or equal to) 3.5: 43%
+
+Krakow has 1354 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 364
+Number or restraunts with rating below 3.5: 990
+Percentage of restraunts with rating above (or equal to) 3.5: 26%
+
+Madrid has 9543 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 4319
+Number or restraunts with rating below 3.5: 5224
+Percentage of restraunts with rating above (or equal to) 3.5: 45%
+
+London has 18212 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 7028
+Number or restraunts with rating below 3.5: 11184
+Percentage of restraunts with rating above (or equal to) 3.5: 38%
+
+Paris has 14874 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 5192
+Number or restraunts with rating below 3.5: 9682
+Percentage of restraunts with rating above (or equal to) 3.5: 34%
+
+Overall
+Number of cities: 31
+Number of restraunts: 125527
+Number of restraunts with rating above (or equal to) 3.5: 43101
+Number of restraunts with rating below 3.5: 82426
+Percentage of restraunts with rating above (or equal to) 3.5: 34%

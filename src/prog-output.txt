@@ -1,0 +1,161 @@
+Amsterdam has 3434 restaurants.
+Number of restaurants with rating above (or equal to) 5: 349
+Number of restaurants with rating below 5: 3085
+Percentage of restaurants with rating above (or equal to) 5: 10.2%
+
+Athens has 1938 restaurants.
+Number of restaurants with rating above (or equal to) 5: 289
+Number of restaurants with rating below 5: 1649
+Percentage of restaurants with rating above (or equal to) 5: 14.9%
+
+Barcelona has 8425 restaurants.
+Number of restaurants with rating above (or equal to) 5: 781
+Number of restaurants with rating below 5: 7644
+Percentage of restaurants with rating above (or equal to) 5: 9.3%
+
+Berlin has 7078 restaurants.
+Number of restaurants with rating above (or equal to) 5: 920
+Number of restaurants with rating below 5: 6158
+Percentage of restaurants with rating above (or equal to) 5: 13%
+
+Bratislava has 1067 restaurants.
+Number of restaurants with rating above (or equal to) 5: 136
+Number of restaurants with rating below 5: 931
+Percentage of restaurants with rating above (or equal to) 5: 12.7%
+
+Brussels has 3204 restaurants.
+Number of restaurants with rating above (or equal to) 5: 178
+Number of restaurants with rating below 5: 3026
+Percentage of restaurants with rating above (or equal to) 5: 5.6%
+
+Budapest has 2606 restaurants.
+Number of restaurants with rating above (or equal to) 5: 342
+Number of restaurants with rating below 5: 2264
+Percentage of restaurants with rating above (or equal to) 5: 13.1%
+
+Copenhagen has 2109 restaurants.
+Number of restaurants with rating above (or equal to) 5: 221
+Number of restaurants with rating below 5: 1888
+Percentage of restaurants with rating above (or equal to) 5: 10.5%
+
+Dublin has 2082 restaurants.
+Number of restaurants with rating above (or equal to) 5: 159
+Number of restaurants with rating below 5: 1923
+Percentage of restaurants with rating above (or equal to) 5: 7.6%
+
+Edinburgh has 1865 restaurants.
+Number of restaurants with rating above (or equal to) 5: 191
+Number of restaurants with rating below 5: 1674
+Percentage of restaurants with rating above (or equal to) 5: 10.2%
+
+Geneva has 1572 restaurants.
+Number of restaurants with rating above (or equal to) 5: 113
+Number of restaurants with rating below 5: 1459
+Percentage of restaurants with rating above (or equal to) 5: 7.2%
+
+Hamburg has 3131 restaurants.
+Number of restaurants with rating above (or equal to) 5: 310
+Number of restaurants with rating below 5: 2821
+Percentage of restaurants with rating above (or equal to) 5: 9.9%
+
+Helsinki has 1228 restaurants.
+Number of restaurants with rating above (or equal to) 5: 79
+Number of restaurants with rating below 5: 1149
+Percentage of restaurants with rating above (or equal to) 5: 6.4%
+
+Krakow has 1354 restaurants.
+Number of restaurants with rating above (or equal to) 5: 160
+Number of restaurants with rating below 5: 1194
+Percentage of restaurants with rating above (or equal to) 5: 11.8%
+
+Lisbon has 3986 restaurants.
+Number of restaurants with rating above (or equal to) 5: 374
+Number of restaurants with rating below 5: 3612
+Percentage of restaurants with rating above (or equal to) 5: 9.4%
+
+Ljubljana has 501 restaurants.
+Number of restaurants with rating above (or equal to) 5: 55
+Number of restaurants with rating below 5: 446
+Percentage of restaurants with rating above (or equal to) 5: 11%
+
+London has 18212 restaurants.
+Number of restaurants with rating above (or equal to) 5: 1592
+Number of restaurants with rating below 5: 16620
+Percentage of restaurants with rating above (or equal to) 5: 8.7%
+
+Luxembourg has 657 restaurants.
+Number of restaurants with rating above (or equal to) 5: 36
+Number of restaurants with rating below 5: 621
+Percentage of restaurants with rating above (or equal to) 5: 5.5%
+
+Lyon has 2930 restaurants.
+Number of restaurants with rating above (or equal to) 5: 221
+Number of restaurants with rating below 5: 2709
+Percentage of restaurants with rating above (or equal to) 5: 7.5%
+
+Madrid has 9543 restaurants.
+Number of restaurants with rating above (or equal to) 5: 639
+Number of restaurants with rating below 5: 8904
+Percentage of restaurants with rating above (or equal to) 5: 6.7%
+
+Milan has 6687 restaurants.
+Number of restaurants with rating above (or equal to) 5: 303
+Number of restaurants with rating below 5: 6384
+Percentage of restaurants with rating above (or equal to) 5: 4.5%
+
+Munich has 2995 restaurants.
+Number of restaurants with rating above (or equal to) 5: 261
+Number of restaurants with rating below 5: 2734
+Percentage of restaurants with rating above (or equal to) 5: 8.7%
+
+Oporto has 1580 restaurants.
+Number of restaurants with rating above (or equal to) 5: 190
+Number of restaurants with rating below 5: 1390
+Percentage of restaurants with rating above (or equal to) 5: 12%
+
+Oslo has 1213 restaurants.
+Number of restaurants with rating above (or equal to) 5: 72
+Number of restaurants with rating below 5: 1141
+Percentage of restaurants with rating above (or equal to) 5: 5.9%
+
+Paris has 14874 restaurants.
+Number of restaurants with rating above (or equal to) 5: 1076
+Number of restaurants with rating below 5: 13798
+Percentage of restaurants with rating above (or equal to) 5: 7.2%
+
+Prague has 4859 restaurants.
+Number of restaurants with rating above (or equal to) 5: 511
+Number of restaurants with rating below 5: 4348
+Percentage of restaurants with rating above (or equal to) 5: 10.5%
+
+Rome has 5949 restaurants.
+Number of restaurants with rating above (or equal to) 5: 753
+Number of restaurants with rating below 5: 5196
+Percentage of restaurants with rating above (or equal to) 5: 12.7%
+
+Stockholm has 2705 restaurants.
+Number of restaurants with rating above (or equal to) 5: 164
+Number of restaurants with rating below 5: 2541
+Percentage of restaurants with rating above (or equal to) 5: 6.1%
+
+Vienna has 3724 restaurants.
+Number of restaurants with rating above (or equal to) 5: 390
+Number of restaurants with rating below 5: 3334
+Percentage of restaurants with rating above (or equal to) 5: 10.5%
+
+Warsaw has 2352 restaurants.
+Number of restaurants with rating above (or equal to) 5: 250
+Number of restaurants with rating below 5: 2102
+Percentage of restaurants with rating above (or equal to) 5: 10.6%
+
+Zurich has 1667 restaurants.
+Number of restaurants with rating above (or equal to) 5: 142
+Number of restaurants with rating below 5: 1525
+Percentage of restaurants with rating above (or equal to) 5: 8.5%
+
+Overall
+Number of cities: 31
+Number of restaurants: 125527
+Number of restaurants with rating above (or equal to) 5: 11257
+Number of restaurants with rating below 5: 114270
+Percentage of restaurants with rating above (or equal to) 5: 9%

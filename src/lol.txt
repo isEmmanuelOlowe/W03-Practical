@@ -1,0 +1,6 @@
+Overall
+Number of cities: 0
+Number of restaurants: 0
+Number of restaurants with rating above (or equal to) 3: 0
+Number of restaurants with rating below 3: 0
+Percentage of restaurants with rating above (or equal to) 3: �%

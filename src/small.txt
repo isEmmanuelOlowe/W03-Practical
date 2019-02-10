@@ -1,0 +1,16 @@
+Amsterdam has 5 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 0
+Number or restraunts with rating below 3.5: 5
+Percentage of restraunts with rating above (or equal to) 3.5: 0%
+
+Athens has 5 restraunts.
+Number of restraunts with rating above (or equal to) 3.5: 1
+Number or restraunts with rating below 3.5: 4
+Percentage of restraunts with rating above (or equal to) 3.5: 20%
+
+Overall
+Number of cities: 2
+Number of restraunts: 10
+Number of restraunts with rating above (or equal to) 3.5: 1
+Number of restraunts with rating below 3.5: 9
+Percentage of restraunts with rating above (or equal to) 3.5: 10%

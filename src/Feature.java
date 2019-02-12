@@ -1,4 +1,11 @@
+/**
+* This is a class allows each object in the CSV file to be converted into a object.
+*
+* @author 180003815
+*/
+
 public class Feature {
+
   private int number;
   private String name;
   private String city;
@@ -11,7 +18,24 @@ public class Feature {
   private String urlTA;
   private String idTA;
 
-  public Feature(int number, String name, String city, String[] style, int ranking, double rating, String priceRange, int reviewNo, String[] reviews, String urlTA, String idTA){
+
+  /**
+  * Creates a Feature in dataset from all the data about the resaurant.
+  *
+  * @param number the number of the restraunt in dataset
+  * @param name the name of the restaurant
+  * @param city the city the restaurant id located in
+  * @param style the different cuisine style the restaurant serves
+  * @param ranking the ranking of the restaurant in its city
+  * @param rating the average rating of restaurant by customers
+  * @param priceRange the price range of the restaurant
+  * @param reviewNo the number of reviews the restaurant has
+  * @param reviews written reviews of the restaurant
+  * @param urlTA relative trip advisor url of the restaurant
+  * @param idTA the trip advisor of the restaurant
+  */
+  public Feature(int number, String name, String city, String[] style, int ranking, double rating, String priceRange, int reviewNo, String[] reviews, String urlTA, String idTA) {
+
     this.number = number;
     this.name = name;
     this.city = city;
@@ -25,38 +49,113 @@ public class Feature {
     this.idTA = idTA;
   }
 
-  //getters and setters for variables to ensure they are not changed during runtime
-  public int getNumber(){
+  /**
+  * Getter for number label.
+  *
+  * @return the number of the restaurant
+  */
+  public int getNumber() {
+
     return this.number;
   }
-  public String getName(){
+
+  /**
+  * Getter for name label.
+  *
+  * @return the name of the restaurant
+  */
+  public String getName() {
+
     return this.name;
   }
-  public String getCity(){
+
+  /**
+  * Getter for city label.
+  *
+  * @return the city in which the restaurant is located
+  */
+  public String getCity() {
+
     return this.city;
   }
-  public String[] getStyle(){
+
+  /**
+  * Getter for style label.
+  *
+  * @return the cuisine styles of the restraunt
+  */
+  public String[] getStyle() {
+
     return this.style;
   }
-  public int getRanking(){
+
+  /**
+  * Getter for ranking label.
+  *
+  * @return the ranking of the resaurant in its city
+  */
+  public int getRanking() {
+
     return this.ranking;
   }
-  public double getRating(){
+
+  /**
+  * Getter for rating label.
+  *
+  * @return the average customer rating of the restaurant
+  */
+  public double getRating() {
+
     return this.rating;
   }
-  public String getPriceRange(){
+
+  /**
+  * Getter for price range label.
+  *
+  * @return the price range of the restraunt
+  */
+  public String getPriceRange() {
+
     return this.priceRange;
   }
-  public int getReviewNo(){
+
+  /**
+  * Getter for Number of Reviews label.
+  *
+  * @return the number of reviews the restaurant has
+  */
+  public int getReviewNo() {
+
     return this.reviewNo;
   }
-  public String[] getReviews(){
+
+  /**
+  * Getter for Reviews label.
+  *
+  * @return written reviews of the restaurant
+  */
+  public String[] getReviews() {
+
     return this.reviews;
   }
-  public String getUrlTA(){
+
+  /**
+  * Getter for Url Trip Advisor Label.
+  *
+  * @return the relative Trip Advisor url of the restaurant
+  */
+  public String getUrlTA() {
+
     return this.urlTA;
   }
-  public String getIdTA(){
+
+  /**
+  * Getter for ID Trip Advisor Label.
+  *
+  * @return the id of the restaurant on Trip Advisor
+  */
+  public String getIdTA() {
+
     return this.idTA;
   }
 }

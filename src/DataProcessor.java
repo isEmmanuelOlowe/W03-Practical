@@ -43,20 +43,11 @@ public class DataProcessor {
     //obtains all the different cuisine
     String[] styles = line[3].replace("[", "").replace("]", "").replace(" ", "").replace("'", "").split(";");
     //converts ranking to Integer
-    int ranking = 0;
-    if(!line[4].equals("")){
-      ranking = (int)Double.parseDouble(line[4]);
-    }
+    int ranking = (int)toDouble(line[4]);
     //converts rating to double
-    double rating = 0;
-    if(!line[5].equals("")){
-      rating = Double.parseDouble(line[5]);
-    }
+    double rating = toDouble(line[5]);
     //converts number of reviewNo to Double
-    int reviewNo = 0;
-    if(!line[7].equals("")){
-      reviewNo = (int)Double.parseDouble(line[7]);
-    }
+    int reviewNo = (int)toDouble(line[7]);
     //obtains all the different Reviews
     String[] reviews = line[3].replace("[", "").replace("]", "").replace(" ", "").replace("'", "").split(";");
     //creates a new feature from the row in the CSV file
@@ -65,6 +56,15 @@ public class DataProcessor {
     this.dataset.add(feature);
   }
 
+  //converts a string to a double
+  //factors for if the field is empty
+  public static double toDouble(String number){
+    int newNumber = 0;
+    if(!number.equals("")){
+      newNumber = Double.parseDouble(number);
+    }
+    return newNumber;
+  }
   //process the dataset to obtain restaurants which meet minimum rating
   public void process(String sMinimumRating){
     try{

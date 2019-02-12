@@ -1,6 +1,3 @@
-import java.util.*;
-import java.io.*;
-
 public class W03Practical {
   public static void main(String[] args){
     if(args.length == 3){

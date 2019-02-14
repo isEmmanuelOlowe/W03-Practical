@@ -59,7 +59,7 @@ public class TopRatedProcessor extends DataProcessor {
         writer.println("The total Rated Restaurants in " + key + " for cuisines are: ");
         SortedMap<String, ArrayList<Feature>> topRated = this.topRatedList.get(key);
         for (String style: topRated.keySet()) {
-          writer.println("\t" + key + ": ");
+          writer.println("\t" + style + ": ");
           for(Feature restaurant: topRated.get(style)) {
             writer.println("\t\t--" + restaurant.getName());
           }

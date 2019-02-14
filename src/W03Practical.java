@@ -16,13 +16,25 @@ public class W03Practical {
     if (args.length == expexctedArguments) {
       String fileName = args[0];
       String outputFile = args[1];
-      String minimumRating = args[2];
+      String process = args[2];
 
       DataProcessor dataset = new DataProcessor();
 
       dataset.readCSV(fileName);
-      dataset.process(minimumRating);
-      dataset.printTo(outputFile);
+
+      //determines which process to run dependent on terminal input
+      switch (process) {
+        case "cuisine":
+          dataset.processCuisine(outputFile);
+          break;
+        //case "rated":
+          //dataset.processRated();
+          //break;
+        default:
+          dataset.processMinimumForCity(process);
+          dataset.printMinimumForCity(outputFile);
+          break;
+      }
     }
     else {
       System.out.println("Usage: java W03Practical <input_file> <output_file> <minimum_rating>");

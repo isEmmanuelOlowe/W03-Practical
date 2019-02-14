@@ -16,6 +16,10 @@ import java.text.DecimalFormat;
 public class DataProcessor {
 
   private ArrayList<Feature> dataset = new ArrayList<Feature>();
+  //For finding number of cuisine style restaurants in each city process
+  //nested map implementation shall be used
+  private SortedMap<String, SortedMap<String, Integer>> cuisineList = new TreeMap<String, SortedMap<String, Integer>>();
+  //for finding minimum rating process
   private SortedMap<String, int[]> ratingList = new TreeMap<String, int[]>();
   private double minimumRating;
 
@@ -105,7 +109,7 @@ public class DataProcessor {
   *
   * @param sMinimumRating the minimum rating
   */
-  public void process(String sMinimumRating) {
+  public void processMinimumForCity(String sMinimumRating) {
 
     //attempts to convert the minimum rating to an integer
     try {
@@ -149,7 +153,7 @@ public class DataProcessor {
   *
   * @param fileName the location in which the file should be stored
   */
-  public void printTo(String fileName) {
+  public void printMinimumForCity(String fileName) {
 
     //for convert to percentage
     final int percent = 100;
@@ -193,5 +197,65 @@ public class DataProcessor {
     catch (FileNotFoundException ex) {
       System.out.println("Error occurrred Writing to " + fileName);
     }
+  }
+
+  /**
+  * Will perform process that shall obtain the number of restaurants in each city for a cuisine style.
+  *
+  * @param fileName the name of the file that process data will be printed to
+  */
+  public void processCuisine(String fileName) {
+
+    for (Feature feature: this.dataset) {
+      //checks if the features city is in the map
+      if (!this.cuisineList.containsKey(feature.getCity())) {
+        //sets a default starting value for the city
+         SortedMap<String, Integer> empty = new TreeMap<String, Integer>();
+        //adds city to the map with default value
+        this.cuisineList.put(feature.getCity(), empty);
+      }
+      //updates the value to add wether or not it meets the requirement
+      addCuisine(feature.getCity(), feature.getStyle());
+      }
+      printCuisine(fileName);
+    }
+
+  //adds cuisine to map
+  private void addCuisine(String city, String[] styles) {
+    SortedMap<String, Integer> cityCuisineList = this.cuisineList.get(city);
+    for(String style: styles){
+      if(!cityCuisineList.containsKey(style)) {
+        //adds the cuisine to the list
+        //since there is that cuisine default value of 1
+        cityCuisineList.put(style, new Integer(1));
+      }
+      else {
+        //updates the value of the cuisine
+        //ensures map data is treated as integer
+        Integer updatedValue = cityCuisineList.get(style) + new Integer(1);
+        cityCuisineList.put(style, updatedValue);
+      }
+    }
+  }
+
+  //prints output the the output of the running of the process to a file
+  private void printCuisine(String fileName) {
+    try {
+      PrintWriter writer = new PrintWriter(fileName);
+
+      for (String key: this.cuisineList.keySet()) {
+        writer.println(key + " has:");
+        SortedMap<String, Integer> cuisineStyles = this.cuisineList.get(key);
+        for (String style: cuisineStyles.keySet()) {
+          writer.println("\t" + cuisineStyles.get(style) + " "  + style
+          + " restaurants.");
+        }
+      }
+      writer.close();
+    }
+    catch (FileNotFoundException ex) {
+      System.out.println("Error occurrred Writing to " + fileName);
+    }
+
   }
 }

@@ -24,9 +24,11 @@ public class W03Practical {
           cuisineDatasetProcess.readCSV(fileName);
           cuisineDatasetProcess.processCuisine(outputFile);
           break;
-        //case "rated":
-          //dataset.processRated();
-          //break;
+        case "rated":
+          TopRatedProcessor topRatedProcess = new TopRatedProcessor();
+          topRatedProcess.readCSV(fileName);
+          topRatedProcess.processTopRated(outputFile);
+          break;
         default:
           RestaurantProcessor restaurantDatasetProcess = new RestaurantProcessor();
           restaurantDatasetProcess.readCSV(fileName);

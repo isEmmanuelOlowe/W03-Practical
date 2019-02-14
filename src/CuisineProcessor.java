@@ -3,10 +3,9 @@ import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.io.IOException;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.TreeMap;
 import java.util.SortedMap;
-import java.text.DecimalFormat;
+import java.io.FileOutputStream;
 
 
 public class CuisineProcessor extends DataProcessor {
@@ -56,8 +55,8 @@ public class CuisineProcessor extends DataProcessor {
   //prints output the the output of the running of the process to a file
   private void printCuisine(String fileName) {
     try {
-      PrintWriter writer = new PrintWriter(fileName);
-
+      //FileOutputStream added to guarrentee file overwrite if it exists
+      PrintWriter writer = new PrintWriter(new FileOutputStream(fileName, false));
       for (String key: this.cuisineList.keySet()) {
         writer.println(key + " has:");
         SortedMap<String, Integer> cuisineStyles = this.cuisineList.get(key);

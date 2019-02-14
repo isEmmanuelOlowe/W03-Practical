@@ -3,10 +3,10 @@ import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.io.IOException;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.TreeMap;
 import java.util.SortedMap;
 import java.text.DecimalFormat;
+import java.io.FileOutputStream;
 
 public class RestaurantProcessor extends DataProcessor {
 
@@ -59,7 +59,8 @@ public class RestaurantProcessor extends DataProcessor {
     int resBelowMin = 0;
     //will create and write to desired file
     try {
-      PrintWriter writer = new PrintWriter(fileName);
+      //FileOutputStream added to guarrentee file overwrite if it exists
+      PrintWriter writer = new PrintWriter(new FileOutputStream(fileName, false));
       //prints summaries for all cities
       for (String key: this.ratingList.keySet()) {
         int[] ratings = this.ratingList.get(key);

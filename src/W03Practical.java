@@ -17,22 +17,21 @@ public class W03Practical {
       String fileName = args[0];
       String outputFile = args[1];
       String process = args[2];
-
-      DataProcessor dataset = new DataProcessor();
-
-      dataset.readCSV(fileName);
-
       //determines which process to run dependent on terminal input
       switch (process) {
         case "cuisine":
-          dataset.processCuisine(outputFile);
+          CuisineProcessor cuisineDatasetProcess = new CuisineProcessor();
+          cuisineDatasetProcess.readCSV(fileName);
+          cuisineDatasetProcess.processCuisine(outputFile);
           break;
         //case "rated":
           //dataset.processRated();
           //break;
         default:
-          dataset.processMinimumForCity(process);
-          dataset.printMinimumForCity(outputFile);
+          RestaurantProcessor restaurantDatasetProcess = new RestaurantProcessor();
+          restaurantDatasetProcess.readCSV(fileName);
+          restaurantDatasetProcess.processMinimumForCity(process);
+          restaurantDatasetProcess.printMinimumForCity(outputFile);
           break;
       }
     }

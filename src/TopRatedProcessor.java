@@ -39,7 +39,7 @@ public class TopRatedProcessor extends DataProcessor {
       }
       else {
         //just prints data to text format
-        printMinimumForCity(fileName);
+        printTopRated(fileName);
       }
     }
     else {

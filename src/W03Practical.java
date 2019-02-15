@@ -32,8 +32,7 @@ public class W03Practical {
         default:
           RestaurantProcessor restaurantDatasetProcess = new RestaurantProcessor();
           restaurantDatasetProcess.readCSV(fileName);
-          restaurantDatasetProcess.processMinimumForCity(process);
-          restaurantDatasetProcess.printMinimumForCity(outputFile);
+          restaurantDatasetProcess.processMinimumForCity(process, outputFile);
           break;
       }
     }

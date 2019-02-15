@@ -31,14 +31,22 @@ public class CuisineProcessor extends DataProcessor {
       //updates the value to add wether or not it meets the requirement
       addCuisine(feature.getCity(), feature.getStyle());
       }
-      printCuisine(fileName);
+      String[] componets = fileName.split("\\.");
+      if (componets.length == 2) {
+        if (componets[1].equals("html")) {
+          printCuisineHTML(fileName);
+        }
+      }
+      else {
+        printCuisine(fileName);
+      }
     }
 
   //adds cuisine to map
   private void addCuisine(String city, String[] styles) {
     SortedMap<String, Integer> cityCuisineList = this.cuisineList.get(city);
-    for(String style: styles){
-      if(!cityCuisineList.containsKey(style)) {
+    for (String style: styles) {
+      if (!cityCuisineList.containsKey(style)) {
         //adds the cuisine to the list
         //since there is that cuisine default value of 1
         cityCuisineList.put(style, new Integer(1));
@@ -53,7 +61,7 @@ public class CuisineProcessor extends DataProcessor {
   }
 
   //prints output the the output of the running of the process to a file
-  private void printCuisine(String fileName) {
+  private void printCuisine (String fileName) {
     try {
       //FileOutputStream added to guarrentee file overwrite if it exists
       PrintWriter writer = new PrintWriter(new FileOutputStream(fileName, false));
@@ -71,5 +79,35 @@ public class CuisineProcessor extends DataProcessor {
       System.out.println("Error occurrred Writing to " + fileName);
     }
 
+  }
+
+  private void printCuisineHTML(String fileName) {
+
+    try {
+      //FileOutputStream added to guarrentee file overwrite if it exists
+      PrintWriter writer = new PrintWriter(new FileOutputStream(fileName, false));
+
+      writer.println("<html>");
+      writer.println("\t<head>");
+      writer.println("\t\t<title>City Cuisine Styles</title>");
+      writer.println("\t</head>");
+      writer.println("\t<body>");
+      writer.println("\t\t<h1>Cuisine Styles offered by Restaurants in Cities</h1>");
+
+      for (String key: this.cuisineList.keySet()) {
+        writer.println("\t\t<h2>" + key + " has: </h2>");
+        SortedMap<String, Integer> cuisineStyles = this.cuisineList.get(key);
+        for (String style: cuisineStyles.keySet()) {
+          writer.println("\t\t<h3>" + cuisineStyles.get(style) + " "  + style
+          + " restaurants.</h3>");
+        }
+      }
+      writer.println("\t</body>");
+      writer.println("</html>");
+      writer.close();
+    }
+    catch (FileNotFoundException ex) {
+      System.out.println("Error occurrred Writing to " + fileName);
+    }
   }
 }

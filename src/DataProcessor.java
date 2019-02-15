@@ -70,7 +70,7 @@ public class DataProcessor {
     //converts first index to 0
     int number = Integer.parseInt(line[numberIndex]);
     //obtains all the different cuisine
-    String[] styles = line[styleIndex].replace("[", "").replace("]", "").replace(" ", "").replace("'", "").split(";");
+    String[] styles = line[styleIndex].replace("[", "").replace("]", "").replace("'", "").split(";");
     //converts ranking to Integer
     int ranking = (int) toDouble(line[rankingIndex]);
     //converts rating to double

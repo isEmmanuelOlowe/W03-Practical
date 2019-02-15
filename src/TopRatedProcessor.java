@@ -13,7 +13,11 @@ public class TopRatedProcessor extends DataProcessor {
   //nested map which will store city: cuisine: top restaurant
   private SortedMap<String, SortedMap<String, ArrayList<Feature>>> topRatedList = new TreeMap<String, SortedMap<String, ArrayList<Feature>>>();
 
-
+  /**
+  * Will perform process that obtains the restaurants with greatest rating for cusiine in a city.
+  *
+  * @param feature the name of the output file
+  /
   public void processTopRated(String fileName) {
 
     for (Feature feature: this.dataset) {
@@ -27,7 +31,15 @@ public class TopRatedProcessor extends DataProcessor {
       //updates the top rated restaurants
       isTopRated(feature);
     }
-    printTopRated(fileName);
+    String[] componets = fileName.split("\\.");
+    if (componets.length == 2){
+      if (componets[1].equals("html")) {
+        printTopRatedHTML(fileName);
+      }
+    }
+    else {
+      printTopRated(fileName);
+    }
   }
 
   private void isTopRated(Feature feature) {
@@ -60,11 +72,45 @@ public class TopRatedProcessor extends DataProcessor {
         SortedMap<String, ArrayList<Feature>> topRated = this.topRatedList.get(key);
         for (String style: topRated.keySet()) {
           writer.println("\t" + style + ": ");
-          for(Feature restaurant: topRated.get(style)) {
-            writer.println("\t\t--" + restaurant.getName());
+          for (Feature restaurant: topRated.get(style)) {
+            writer.println("\t\t--Name:" + restaurant.getName() + " Rating:" + restaurant.getRating());
           }
         }
       }
+      writer.close();
+    }
+    catch (FileNotFoundException ex) {
+      System.out.println("Error occurrred Writing to " + fileName);
+    }
+  }
+
+  private void printTopRatedHTML (String fileName) {
+    try {
+      PrintWriter writer = new PrintWriter(new FileOutputStream(fileName, false));
+      writer.println("<html>");
+      writer.println("\t<head>");
+      writer.println("\t\t<title> The Top Rated Restaurants</title>");
+      writer.println("\t</head>");
+      writer.println("\t<body>");
+      writer.println("\t\t<h1> The Name and Rating of the Best Rated"
+      + " Restaurants for Each cuisine style in each city</h1>");
+      for (String key: this.topRatedList.keySet()) {
+        writer.println("\t\t<h2>" + key + "</h2>");
+        SortedMap<String, ArrayList<Feature>> topRated = this.topRatedList.get(key);
+        for (String style: topRated.keySet()) {
+          writer.println("\t\t<h3>" + style + "</h3>");
+          for (Feature restaurant: topRated.get(style)) {
+            writer.println("\t\t<h4>" + restaurant.getName() + "</h4>");
+            writer.println("\t\t<h5> Rating: " + restaurant.getRating());
+            writer.println("<h5>Reviews: </h5>");
+            for (String review: restaurant.getReviews()) {
+              writer.println("<p>" + review + "</p>");
+            }
+          }
+        }
+      }
+      writer.println("\t</body>");
+      writer.println("</html>");
       writer.close();
     }
     catch (FileNotFoundException ex) {

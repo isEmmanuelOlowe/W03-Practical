@@ -13,12 +13,14 @@ public class RestaurantProcessor extends DataProcessor {
   //for finding minimum rating process
   private SortedMap<String, int[]> ratingList = new TreeMap<String, int[]>();
   private double minimumRating;
+
   /**
   * Determines the Restaurants which are greater the minmum rating.
   *
   * @param sMinimumRating the minimum rating
+  * @param fileName the name of the output file
   */
-  public void processMinimumForCity(String sMinimumRating) {
+  public void processMinimumForCity(String sMinimumRating, String fileName) {
 
     //attempts to convert the minimum rating to an integer
     try {
@@ -41,6 +43,15 @@ public class RestaurantProcessor extends DataProcessor {
       this.ratingList.put(feature.getCity(), rating(this.ratingList.get(feature.getCity()),
       feature.getRating()));
       }
+      String[] componets = fileName.split("\\.");
+      if (componets.length == 2) {
+        if (componets[1].equals("html")) {
+          printMinimumForCityHTML(fileName);
+        }
+      }
+      else {
+        printMinimumForCity(fileName);
+      }
     }
 
   /**
@@ -48,7 +59,7 @@ public class RestaurantProcessor extends DataProcessor {
   *
   * @param fileName the location in which the file should be stored
   */
-  public void printMinimumForCity(String fileName) {
+  private void printMinimumForCity(String fileName) {
 
     //for convert to percentage
     final int percent = 100;
@@ -95,6 +106,58 @@ public class RestaurantProcessor extends DataProcessor {
     }
   }
 
+  private void printMinimumForCityHTML(String fileName) {
+
+        //for convert to percentage
+        final int percent = 100;
+        String pattern = "##0.#";
+        DecimalFormat decimalFormat = new DecimalFormat(pattern);
+        //stores the total of restaurants meeting or not minimum rating
+        int resAboveMin = 0;
+        int resBelowMin = 0;
+        //will create and write to desired file
+    try {
+      PrintWriter writer = new PrintWriter(new FileOutputStream(fileName, false));
+      writer.println("<html>");
+      writer.println("\t<head>");
+      writer.println("\t\t<title>City Restaurant Ratings</title>");
+      writer.println("\t</head>");
+      writer.println("\t<body>");
+      writer.println("\t\t<h1>Which City has most Restaurants above " + this.minimumRating + "</h1>");
+      for (String key: this.ratingList.keySet()) {
+        int[] ratings = this.ratingList.get(key);
+        //adds the restaurants which meet the respective ratings groups
+        resAboveMin += ratings[0];
+        resBelowMin += ratings[1];
+        writer.println("\t\t<h2>" + key + "</h2>");
+        writer.println("\t\t<h2>Number of restaurants with rating above (or equal to) "
+        + decimalFormat.format(this.minimumRating) + ": " + ratings[0] + "</h2>");
+        writer.println("\t\t<h2>Number of restaurants with rating below "
+        + decimalFormat.format(this.minimumRating) + ": " + ratings[1] + "</h2>");
+        writer.println("\t\t<h2>Percentage of restaurants with rating above (or equal to) "
+        + decimalFormat.format(this.minimumRating) + ": "
+        + decimalFormat.format(((double) ratings[0] * percent / (ratings[0] + ratings[1]))) + "%</h2>");
+      }
+      //prints the overall summary
+      writer.println("<h2>Overall</h2>");
+      writer.println("<h2>Number of cities: " + this.ratingList.keySet().size() + "</h2>");
+      writer.println("<h2>Number of restaurants: " + (resAboveMin + resBelowMin) + "</h2>");
+      writer.println("<h2>Number of restaurants with rating above (or equal to) "
+      + decimalFormat.format(this.minimumRating) + ": " + resAboveMin + "</h2>");
+      writer.println("<h2>Number of restaurants with rating below "
+      + decimalFormat.format(this.minimumRating) + ": " + resBelowMin + "</h2>");
+      writer.println("<h2>Percentage of restaurants with rating above (or equal to) "
+      + decimalFormat.format(this.minimumRating) + ": "
+      + decimalFormat.format(((double) resAboveMin * percent / (resAboveMin + resBelowMin)))
+      + "% </h2>");
+      writer.println("\t</body>");
+      writer.println("</html>");
+      writer.close();
+    }
+    catch (FileNotFoundException ex) {
+      System.out.println("Error occurrred Writing to " + fileName);
+    }
+  }
   //determines if a restaurant meets the minimum rating requirement
   private int[] rating(int[] cityRating, double resRating) {
 

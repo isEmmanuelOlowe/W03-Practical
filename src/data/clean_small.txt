@@ -1,0 +1,50 @@
+The total Rated Restaurants in Amsterdam for cuisines are: 
+	 Contemporary: 
+		--Name:Vinkeles Rating:5.0
+	 Dutch: 
+		--Name:Martine of Martine's Table Rating:5.0
+	 European: 
+		--Name:Martine of Martine's Table Rating:5.0
+		--Name:Vinkeles Rating:5.0
+	 French: 
+		--Name:La Rive Rating:4.5
+	 Gluten Free Options: 
+		--Name:Vinkeles Rating:5.0
+	 International: 
+		--Name:Vinkeles Rating:5.0
+	 Vegan Options: 
+		--Name:Vinkeles Rating:5.0
+	 Vegetarian Friendly: 
+		--Name:Vinkeles Rating:5.0
+	Dutch: 
+		--Name:De Silveren Spiegel Rating:4.5
+		--Name:Librije's Zusje Amsterdam Rating:4.5
+	French: 
+		--Name:Martine of Martine's Table Rating:5.0
+		--Name:Vinkeles Rating:5.0
+	Mediterranean: 
+		--Name:La Rive Rating:4.5
+The total Rated Restaurants in Athens for cuisines are: 
+	 Barbecue: 
+		--Name:Prigkipas Rating:5.0
+	 European: 
+		--Name:Athens Status Acropolis Restaurant Rating:4.5
+	 Fast Food: 
+		--Name:Prigkipas Rating:5.0
+	 Greek: 
+		--Name:Grill House Vassilis Rating:4.5
+		--Name:Athens Status Acropolis Restaurant Rating:4.5
+	 Grill: 
+		--Name:Prigkipas Rating:5.0
+	 Steakhouse: 
+		--Name:Prigkipas Rating:5.0
+	 Vegan Options: 
+		--Name:Athens Status Acropolis Restaurant Rating:4.5
+	 Vegetarian Friendly: 
+		--Name:Grill House Vassilis Rating:4.5
+		--Name:Athens Status Acropolis Restaurant Rating:4.5
+	Greek: 
+		--Name:Prigkipas Rating:5.0
+	Mediterranean: 
+		--Name:Grill House Vassilis Rating:4.5
+		--Name:Athens Status Acropolis Restaurant Rating:4.5

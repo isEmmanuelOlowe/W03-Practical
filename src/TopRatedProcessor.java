@@ -83,7 +83,6 @@ public class TopRatedProcessor extends DataProcessor {
           }
         }
       }
-      System.out.println("???");
       writer.close();
     }
     catch (FileNotFoundException ex) {

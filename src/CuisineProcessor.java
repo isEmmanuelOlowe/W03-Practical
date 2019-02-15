@@ -37,6 +37,10 @@ public class CuisineProcessor extends DataProcessor {
         if (componets[1].equals("html")) {
           printCuisineHTML(fileName);
         }
+        else {
+          //just prints data to text format
+          printCuisine(fileName);
+        }
       }
       else {
         //just prints data to text format

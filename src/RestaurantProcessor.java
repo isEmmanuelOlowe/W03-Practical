@@ -49,6 +49,10 @@ public class RestaurantProcessor extends DataProcessor {
           //determines if user is trying to create html file
           printMinimumForCityHTML(fileName);
         }
+        else {
+          //just prints data to text format
+          printMinimumForCity(fileName);
+        }
       }
       else {
         //just prints data to text format

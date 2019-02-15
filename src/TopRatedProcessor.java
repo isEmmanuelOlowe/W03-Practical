@@ -37,6 +37,10 @@ public class TopRatedProcessor extends DataProcessor {
       if (componets[1].equals("html")) {
         printTopRatedHTML(fileName);
       }
+      else {
+        //just prints data to text format
+        printMinimumForCity(fileName);
+      }
     }
     else {
       //just prints data to text format
@@ -79,6 +83,7 @@ public class TopRatedProcessor extends DataProcessor {
           }
         }
       }
+      System.out.println("???");
       writer.close();
     }
     catch (FileNotFoundException ex) {

@@ -17,7 +17,7 @@ public class TopRatedProcessor extends DataProcessor {
   * Will perform process that obtains the restaurants with greatest rating for cusiine in a city.
   *
   * @param feature the name of the output file
-  /
+  */
   public void processTopRated(String fileName) {
 
     for (Feature feature: this.dataset) {
@@ -32,12 +32,14 @@ public class TopRatedProcessor extends DataProcessor {
       isTopRated(feature);
     }
     String[] componets = fileName.split("\\.");
+    //determines if user is trying to create html file
     if (componets.length == 2){
       if (componets[1].equals("html")) {
         printTopRatedHTML(fileName);
       }
     }
     else {
+      //just prints data to text format
       printTopRated(fileName);
     }
   }
@@ -87,6 +89,7 @@ public class TopRatedProcessor extends DataProcessor {
   private void printTopRatedHTML (String fileName) {
     try {
       PrintWriter writer = new PrintWriter(new FileOutputStream(fileName, false));
+      //html prologue
       writer.println("<html>");
       writer.println("\t<head>");
       writer.println("\t\t<title> The Top Rated Restaurants</title>");
@@ -109,6 +112,7 @@ public class TopRatedProcessor extends DataProcessor {
           }
         }
       }
+      //html epilogue
       writer.println("\t</body>");
       writer.println("</html>");
       writer.close();

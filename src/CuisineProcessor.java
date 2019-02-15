@@ -32,12 +32,14 @@ public class CuisineProcessor extends DataProcessor {
       addCuisine(feature.getCity(), feature.getStyle());
       }
       String[] componets = fileName.split("\\.");
+      //determines if user is trying to create html file
       if (componets.length == 2) {
         if (componets[1].equals("html")) {
           printCuisineHTML(fileName);
         }
       }
       else {
+        //just prints data to text format
         printCuisine(fileName);
       }
     }
@@ -86,7 +88,7 @@ public class CuisineProcessor extends DataProcessor {
     try {
       //FileOutputStream added to guarrentee file overwrite if it exists
       PrintWriter writer = new PrintWriter(new FileOutputStream(fileName, false));
-
+      //html prologue
       writer.println("<html>");
       writer.println("\t<head>");
       writer.println("\t\t<title>City Cuisine Styles</title>");
@@ -102,6 +104,7 @@ public class CuisineProcessor extends DataProcessor {
           + " restaurants.</h3>");
         }
       }
+      //html epilogue
       writer.println("\t</body>");
       writer.println("</html>");
       writer.close();

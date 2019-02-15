@@ -46,10 +46,12 @@ public class RestaurantProcessor extends DataProcessor {
       String[] componets = fileName.split("\\.");
       if (componets.length == 2) {
         if (componets[1].equals("html")) {
+          //determines if user is trying to create html file
           printMinimumForCityHTML(fileName);
         }
       }
       else {
+        //just prints data to text format
         printMinimumForCity(fileName);
       }
     }
@@ -118,6 +120,7 @@ public class RestaurantProcessor extends DataProcessor {
         //will create and write to desired file
     try {
       PrintWriter writer = new PrintWriter(new FileOutputStream(fileName, false));
+      //html prologue
       writer.println("<html>");
       writer.println("\t<head>");
       writer.println("\t\t<title>City Restaurant Ratings</title>");
@@ -150,6 +153,7 @@ public class RestaurantProcessor extends DataProcessor {
       + decimalFormat.format(this.minimumRating) + ": "
       + decimalFormat.format(((double) resAboveMin * percent / (resAboveMin + resBelowMin)))
       + "% </h2>");
+      //html epilogue
       writer.println("\t</body>");
       writer.println("</html>");
       writer.close();
